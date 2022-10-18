@@ -1,0 +1,36 @@
+.library-items {
+  // .library-items__container
+  &__container {
+  }
+
+  // .library-items__table
+  &__table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: left;
+    thead {
+      tr {
+        background-color: #e2e2e2;
+      }
+      th {
+        padding: 17px 0 17px 5px;
+      }
+    }
+    tbody {
+      tr:nth-child(even) {
+        background-color: #e2e2e2;
+      }
+      td {
+        padding: 10px 0 10px 5px;
+      }
+    }
+  }
+
+  &__edit-link {
+
+  }
+
+  &__remove-link {
+    margin-left: 15px;
+  }
+}

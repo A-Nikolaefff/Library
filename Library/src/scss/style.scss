@@ -1,0 +1,83 @@
+// ПЕРЕМЕННЫЕ в файле vars.scss подключается с помощью webpack-плагина sass-resources-loader
+
+//<ПОДКЛЮЧЕНИЕ ШРИФТОВ>================================================================================================
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700//&display=swap&subset=cyrillic-ext);
+@import 'fonts';
+//</ПОДКЛЮЧЕНИЕ ШРИФТОВ>===============================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>=========================================================================================
+
+@import "null";
+body {
+  color: $mainTextColor;
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>========================================================================================
+
+//<ОСНОВНАЯ СЕТКА>=====================================================================================================
+._container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  @media (max-width: $md1 + px) {
+    max-width: 970px;
+  }
+  @media (max-width: $md2+px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+//</ОСНОВНАЯ СЕТКА>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>======================================================================
+@import "header";
+@import "save-form";
+@import "library-items";
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>======================================================================
+
+//<ОСНОВНОЙ БЛОК>=====================================================================================================
+.page {
+  // .page__title
+  &__title {
+  }
+
+  // .page__save-form
+  &__save-form {
+    margin-top: 15px;
+  }
+
+  // .page__library-items
+  &__library-items {
+    margin-top: 20px;
+  }
+}
+
+.title-page {
+  // .title-page__container
+  &__container {
+    background-color: #d9d5d5;
+    padding: 5px 0;
+  }
+
+  // .title-page__title
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 0 10px;
+  }
+}
+//</ОСНОВНОЙ БЛОК>=====================================================================================================
+
+
+.button {
+  background-color: #e0e0e0;
+  padding: 4px 5px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  transition: color 0.3s ease 0s;
+  &:hover {
+    color: $hoverColor;
+  }
+}

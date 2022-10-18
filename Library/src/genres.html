@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+                <div class="header__container _container">
+                    <a href="/" class="header__logo">
+                    </a>
+                    <nav class="header__menu menu">
+                        <div class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/index.html" class="menu__link ">Books</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/authors.html" class="menu__link">Authors</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/genres.html" class="menu__link">Genres</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+    <main class="page">
+        <div class="page__title title-page">
+            <div class="title-page__container _container">
+                <h1 class="title-page__title">Genres</h1>
+            </div>
+        </div>
+        <div class="page__save-form save-form">
+            <div class="save-form__container _container">
+                <div class="save-form__body">
+                    <div class="save-form__items">
+                        <input class="save-form__input" type="hidden" id="genreId"/>
+                        <div class="save-form__item">
+                            <p class="save-form__input-description">Genre:</p>
+                            <input class="save-form__input" id="genreName"/>
+                        </div>
+                    </div>
+                    <div class="save-form__buttons">
+                        <button class="save-form__button button" id="saveGenreBtn">Save</button>
+                        <button class="save-form__button button" id="resetGenreBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page__library-items library-items">
+            <div class="library-items__container _container">
+                <table class="library-items__table">
+                    <thead><tr><th>Genre</th><th>Action</th></tr></thead>
+                    <tbody id="genres">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.header {
+  padding: 0 0;
+  // background-color: gray;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: left;
+  }
+
+  // .header__logo
+  &__logo {
+    display: block;
+    width: 214px;
+    height: 64px;
+    background-size: 214px 64px;
+    background-repeat: no-repeat;
+    background-image: url("../images/library.png");
+  }
+
+  // .header__menu
+  &__menu {
+    padding-left: 30px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // .menu__body
+  &__body {
+  }
+
+  // .menu__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  // .menu__item
+  &__item {
+    &:not(:first-child) {
+      padding-left: 40px
+    }
+  }
+  // .menu__link
+  &__link {
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease 0s;
+    font-family: $fontTitle;
+    font-weight: bold;
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+}

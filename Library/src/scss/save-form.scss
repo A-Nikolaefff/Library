@@ -1,0 +1,50 @@
+.save-form {
+  // .save-form__container
+  &__container {
+    display: flex;
+  }
+
+  // .save-form__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .save-form__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .save-form__input
+  &__input {
+    background-color: #f3f3f3;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+  }
+
+  // .save-form__item
+  &__item {
+    display: flex;
+    padding: 5px 0;
+  }
+
+  // .save-form__input-description
+  &__input-description {
+    width: 60px;
+  }
+
+  // .save-form__buttons
+  &__buttons {
+    margin-top: 5px;
+  }
+
+
+  // .save-form__button
+  &__button {
+
+    &:not(:first-child) {
+      margin-left: 10px
+    }
+  }
+}
