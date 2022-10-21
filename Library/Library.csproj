@@ -11,6 +11,7 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0-rc.2.22472.11" />
       <PackageReference Include="Npgsql" Version="7.0.0-rc.2" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0-rc.2" />
+      <PackageReference Include="Serilog.AspNetCore" Version="6.1.0-dev-00285" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 

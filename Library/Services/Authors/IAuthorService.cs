@@ -8,6 +8,6 @@ public interface IAuthorService
     Task<Author> Create(CreateAuthorDTO request);
     Task<IEnumerable<Author>> GetAll();
     Task<Author?> Get(int id);
-    Task<Author?> Update(Author authorData);
+    Task<Author?> Update(UpdateAuthorDTO updateAuthorDto);
     Task<Author?> Delete(int id);
 }

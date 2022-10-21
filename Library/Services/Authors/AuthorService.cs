@@ -36,11 +36,11 @@ public class AuthorService : IAuthorService
         return await _authorRepository.GetFirstOrDefault(new ByIdSpec<Author>(id));
     }
 
-    public async Task<Author?> Update(Author authorData)
+    public async Task<Author?> Update(UpdateAuthorDTO updateAuthorDto)
     {
-        var author = await _authorRepository.GetFirstOrDefault(new ByIdSpec<Author>(authorData.Id));
+        var author = await _authorRepository.GetFirstOrDefault(new ByIdSpec<Author>(updateAuthorDto.Id));
         if (author is null) return author;
-        author.Name = authorData.Name;
+        author.Name = updateAuthorDto.Name;
         _authorRepository.Update(author);
         await _authorRepository.SaveChangesAsync();
         return author;

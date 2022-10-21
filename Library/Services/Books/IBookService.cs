@@ -5,7 +5,7 @@ namespace Library.Services.Books;
 
 public interface IBookService
 {
-    Task<Book> Create(CreateBookDTO bookDto);
+    Task<Book?> Create(CreateBookDTO bookDto);
     Task<IEnumerable<Book>> GetAll();
     Task<Book?> Get(int id);
     Task<Book?> Update(Book bookData);

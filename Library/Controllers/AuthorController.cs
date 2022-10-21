@@ -36,9 +36,9 @@ public class AuthorController : BaseController
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update([FromBody] Author authorData)
+    public async Task<IActionResult> Update([FromBody] UpdateAuthorDTO updateAuthorDto)
     {
-        var response = await _authorService.Update(authorData);
+        var response = await _authorService.Update(updateAuthorDto);
         if (response is null) return new NotFoundResult();
         return Ok(response);
     }

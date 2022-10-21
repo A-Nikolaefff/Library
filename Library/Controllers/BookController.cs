@@ -2,6 +2,7 @@
 using Library.DTO.Requests;
 using Library.Services.Books;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace Library.Controllers;
 [Route("api/books")]
@@ -18,7 +19,7 @@ public class BookController : BaseController
     public async Task<IActionResult> Create([FromBody] CreateBookDTO bookData)
     {
         var response = await _bookService.Create(bookData);
-        return Ok(response);
+        return response is not null ? Ok(response) : new BadRequestResult();
     }
     
     [HttpGet]

@@ -32,15 +32,14 @@ public class GenreService : IGenreService
 
     public async Task<Genre?> Get(int id)
     {
-        var genres = await _genreRepository.Get(new ByIdSpec<Genre>(id));
-        return genres.FirstOrDefault();
+        return await _genreRepository.GetFirstOrDefault(new ByIdSpec<Genre>(id));
     }
 
-    public async Task<Genre?> Update(Genre genreData)
+    public async Task<Genre?> Update(UpdateGenreDTO updateGenreDto)
     {
-        var genre = await _genreRepository.GetFirstOrDefault(new ByIdSpec<Genre>(genreData.Id));
+        var genre = await _genreRepository.GetFirstOrDefault(new ByIdSpec<Genre>(updateGenreDto.Id));
         if (genre is null) return genre;
-        genre.Name = genreData.Name;
+        genre.Name = updateGenreDto.Name;
         _genreRepository.Update(genre);
         await _genreRepository.SaveChangesAsync();
         return genre;

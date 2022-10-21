@@ -37,9 +37,9 @@ public class GenreController : BaseController
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update([FromBody] Genre genreData)
+    public async Task<IActionResult> Update([FromBody] UpdateGenreDTO updateGenreDto)
     {
-        var response = await _genreService.Update(genreData);
+        var response = await _genreService.Update(updateGenreDto);
         if (response is null) return new NotFoundResult();
         return Ok(response);
     }
