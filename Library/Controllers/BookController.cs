@@ -37,9 +37,9 @@ public class BookController : BaseController
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update([FromBody] Book bookData)
+    public async Task<IActionResult> Update([FromBody] UpdateBookDTO updateBookDto)
     {
-        var response = await _bookService.Update(bookData);
+        var response = await _bookService.Update(updateBookDto);
         if (response is null) return new NotFoundResult();
         return Ok(response);
     }

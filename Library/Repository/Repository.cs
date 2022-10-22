@@ -18,7 +18,7 @@ public abstract class Repository<T> : IRepository<T> where T : Entity
     public virtual async Task<T> CreateAsync(T newEntity)
     {
         var entityEntry = await _context.Set<T>().AddAsync(newEntity);
-            return entityEntry.Entity;
+        return entityEntry.Entity;
     }
         
     public virtual async Task<IEnumerable<T>> Get()
